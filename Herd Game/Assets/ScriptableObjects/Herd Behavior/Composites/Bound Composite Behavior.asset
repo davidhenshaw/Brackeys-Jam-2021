@@ -10,7 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7c7d10860f817f4cb23f3620b058833, type: 3}
-  m_Name: New Composite Behavior
+  m_Name: Bound Composite Behavior
   m_EditorClassIdentifier: 
-  behaviors: []
-  weights: []
+  behaviors:
+  - {fileID: 11400000, guid: da561c1bec247784199549ff636a1097, type: 2}
+  - {fileID: 11400000, guid: 07840e581cf03e249891c008e2e4c498, type: 2}
+  - {fileID: 11400000, guid: be992201f249dc0428f9d423b8c3d691, type: 2}
+  - {fileID: 11400000, guid: 60a421b9462662d4ab1548e85c69e46b, type: 2}
+  weights:
+  - 0.89
+  - 2.03
+  - 1.34
+  - 2.97

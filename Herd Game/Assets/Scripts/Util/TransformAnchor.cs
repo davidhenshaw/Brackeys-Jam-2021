@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace metakazz.Util{
+namespace metakazz.Util
+{
+    [CreateAssetMenu(menuName = "Runtime Anchors/Transform")]
     public class TransformAnchor : ScriptableObject
     {
         [HideInInspector]
