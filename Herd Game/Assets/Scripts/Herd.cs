@@ -68,7 +68,6 @@ namespace metakazz{
                     );
                 newAgent.name = "Agent " + i;
                 herdAgents.Add(newAgent);
-                Debug.Log(newAgent.transform.eulerAngles.ToString());
             }
         }
 

@@ -30,11 +30,19 @@ namespace metakazz{
     public class CompositeBehaviorEditor : Editor
     {
         float[] weights;
-
+        float minSliderValue = 0;
+        float maxSliderValue = 5;
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
             CompositeBehavior behavior = (CompositeBehavior)target;
+
+            if (behavior == null)
+                return;
+
+            if (behavior.behaviors == null || behavior.behaviors.Length == 0)
+                return;
+
             int behaviorCount = behavior.behaviors.Length;
             weights = behavior.weights;
 
@@ -45,7 +53,11 @@ namespace metakazz{
             GUILayout.BeginVertical();
             for(int i = 0; i < weights.Length; i++)
             {
-                weights[i] = EditorGUILayout.Slider(behavior.behaviors[i].name + $"({i})", weights[i], 0, 1);
+                string labelName = "";
+                if (behavior.behaviors[i] != null)
+                    labelName = behavior.behaviors[i].name;
+
+                weights[i] = EditorGUILayout.Slider(labelName + $"({i})", weights[i], minSliderValue, maxSliderValue);
             }
             GUILayout.EndVertical();
 
