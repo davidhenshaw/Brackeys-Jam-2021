@@ -17,7 +17,9 @@ namespace metakazz{
         // Update is called once per frame
         public void Move(Vector2 velocity)
         {
-            transform.up = velocity.normalized;
+            if(velocity.magnitude > 0)
+                transform.up = velocity.normalized;
+
             transform.position += (Vector3)velocity * Time.deltaTime;
         }
     }

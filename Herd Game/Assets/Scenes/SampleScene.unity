@@ -235,12 +235,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentPrefab: {fileID: 1809263987903779853, guid: 4939d7874c712184dafd5426331b4dae,
     type: 3}
-  behavior: {fileID: 11400000, guid: be992201f249dc0428f9d423b8c3d691, type: 2}
-  startingCount: 10
-  agentDensity: 0.2
-  neighborRadius: 0
-  speedMultiplier: 2
-  maxSpeed: 5
+  behavior: {fileID: 11400000, guid: 7088dd0fa8e62bb45b5ac335350db5b6, type: 2}
+  startingCount: 50
+  agentDensity: 6.45
+  neighborRadius: 1.96
+  avoidRadius: 2
+  speedMultiplier: 1
+  maxSpeed: 7.1
 --- !u!4 &1069800800
 Transform:
   m_ObjectHideFlags: 0

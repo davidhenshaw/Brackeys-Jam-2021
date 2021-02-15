@@ -16,7 +16,7 @@ namespace metakazz{
         public float agentDensity = 0.2f;
         [Range(0, 5)]
         public float neighborRadius;
-        [Range(0, 1)]
+        [Range(0, 2)]
         public float avoidRadius;
         [Range(1, 10)]
         public float speedMultiplier;
@@ -66,8 +66,9 @@ namespace metakazz{
                     Quaternion.Euler(Vector3.forward * UnityEngine.Random.Range(0f, 360f)),
                     transform
                     );
-                newAgent.name = "Agent " + 1;
+                newAgent.name = "Agent " + i;
                 herdAgents.Add(newAgent);
+                Debug.Log(newAgent.transform.eulerAngles.ToString());
             }
         }
 
