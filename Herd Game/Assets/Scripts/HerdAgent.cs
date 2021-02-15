@@ -6,12 +6,15 @@ namespace metakazz{
     public class HerdAgent : MonoBehaviour
     {
         Collider2D myCollider;
+        Herd myHerd;
         public Collider2D AgentCollider { get { return myCollider; } }
+        public Herd AgentHerd { get => myHerd; }
 
         // Start is called before the first frame update
         void Start()
         {
             myCollider = GetComponent<Collider2D>();
+            myHerd = GetComponentInParent<Herd>();
         }
 
         // Update is called once per frame

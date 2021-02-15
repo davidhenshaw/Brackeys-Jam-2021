@@ -10,7 +10,6 @@ namespace metakazz
         public Vector2 center;
         public float radius = 15f;
 
-
         public override Vector2 CalculateMove(HerdAgent agent, List<Transform> context, Herd herd)
         {
             Vector2 centerOffset = center - (Vector2)agent.transform.position;

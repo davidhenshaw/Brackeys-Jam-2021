@@ -45,7 +45,7 @@ namespace metakazz{
                 List<Transform> context = GetNearbyObjects(agent);
 
                 //FOR DEBUGGING ONLY
-                agent.GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, context.Count / 4f);
+                //agent.GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, context.Count / 4f);
 
                 Vector2 move = behavior.CalculateMove(agent, context, this);
 

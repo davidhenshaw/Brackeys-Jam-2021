@@ -21,7 +21,7 @@ namespace metakazz
             }
             alignmentMove /= context.Count;
 
-            return alignmentMove;
+            return alignmentMove.normalized;
         }
     }
 }
