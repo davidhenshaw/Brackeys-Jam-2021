@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace metakazz
 {
-    [CreateAssetMenu(menuName = "HerdBehavior/SmoothCohesion")]
+    [CreateAssetMenu(menuName = "HerdBehavior/Smooth Cohesion")]
     public class SmoothCohesionBehavior : HerdBehavior
     {
         Vector2 currentVelocity;
