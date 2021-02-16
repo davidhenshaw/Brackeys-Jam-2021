@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e03b21f0322e142b13f35d9fddfe57, type: 3}
   m_Name: Smooth Cohesion
   m_EditorClassIdentifier: 
-  turnSmoothTime: 0.5
+  turnSmoothTime: 5.93

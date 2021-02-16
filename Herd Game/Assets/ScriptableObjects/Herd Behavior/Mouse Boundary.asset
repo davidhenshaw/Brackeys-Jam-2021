@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc2adfc7e4213c4c8e6af520d08d94c, type: 3}
   m_Name: Mouse Boundary
   m_EditorClassIdentifier: 
-  anchor: {fileID: 11400000, guid: 689242a63c7d04c4d8087e4cbb76fb96, type: 2}
-  radius: 15
+  tfAnchor: {fileID: 11400000, guid: 689242a63c7d04c4d8087e4cbb76fb96, type: 2}
+  radius: 12
