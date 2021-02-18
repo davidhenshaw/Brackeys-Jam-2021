@@ -25,5 +25,11 @@ namespace metakazz{
 
             transform.position += (Vector3)velocity * Time.deltaTime;
         }
+
+        [ContextMenu("Die")]
+        public void Die()
+        {
+            myHerd.RemoveAgent(this);
+        }
     }
 }
