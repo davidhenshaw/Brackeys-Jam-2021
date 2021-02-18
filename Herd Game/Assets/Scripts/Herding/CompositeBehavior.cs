@@ -24,6 +24,14 @@ namespace metakazz{
 
             return movement;
         }
+
+        public override void Initialize()
+        {
+            foreach(HerdBehavior hb in behaviors)
+            {
+                hb.Initialize();
+            }
+        }
     }
 
     [CustomEditor(typeof(CompositeBehavior))]

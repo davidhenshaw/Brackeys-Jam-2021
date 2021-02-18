@@ -23,5 +23,10 @@ namespace metakazz
 
             return alignmentMove.normalized;
         }
+
+        public override void Initialize()
+        {
+            //throw new System.NotImplementedException();
+        }
     }
 }

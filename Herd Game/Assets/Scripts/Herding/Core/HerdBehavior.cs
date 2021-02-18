@@ -7,6 +7,8 @@ namespace metakazz
 {
     public abstract class HerdBehavior : ScriptableObject
     {
+        public abstract void Initialize();
+
         public abstract Vector2 CalculateMove(HerdAgent agent, List<Transform> context, Herd herd);
     }
 }

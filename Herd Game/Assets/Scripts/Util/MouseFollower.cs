@@ -8,6 +8,10 @@ namespace metakazz.Util
     {
         public TransformAnchor mouseAnchor;
         public TransformAnchor cameraAnchor;
+        [Space]
+        public TransformEventSO lmbDownEvent;
+        public TransformEventSO rmbDownEvent;
+
         Camera mainCamera;
 
         private void Start()
@@ -32,6 +36,18 @@ namespace metakazz.Util
             Vector3 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             //Set my position to the mouse position
             transform.position = mousePos;
+
+            if(Input.GetMouseButtonDown(0))
+            {
+                lmbDownEvent.RaiseEvent(transform);
+            }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                rmbDownEvent.RaiseEvent(transform);
+            }
         }
     }
+
+
 }

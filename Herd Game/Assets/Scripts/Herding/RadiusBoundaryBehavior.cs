@@ -23,5 +23,10 @@ namespace metakazz
 
             return centerOffset * t * t;
         }
+
+        public override void Initialize()
+        {
+            //throw new System.NotImplementedException();
+        }
     }
 }

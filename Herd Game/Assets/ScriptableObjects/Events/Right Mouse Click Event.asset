@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bc2adfc7e4213c4c8e6af520d08d94c, type: 3}
-  m_Name: Mouse Boundary
+  m_Script: {fileID: 11500000, guid: 0d9372d988efc3c468ef598fb64fa7e7, type: 3}
+  m_Name: Right Mouse Click Event
   m_EditorClassIdentifier: 
-  tfAnchor: {fileID: 11400000, guid: 689242a63c7d04c4d8087e4cbb76fb96, type: 2}
-  radius: 8

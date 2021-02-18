@@ -32,5 +32,10 @@ namespace metakazz{
 
             return average;
         }
+
+        public override void Initialize()
+        {
+            //throw new System.NotImplementedException();
+        }
     }
 }

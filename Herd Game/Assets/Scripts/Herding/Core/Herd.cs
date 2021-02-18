@@ -25,17 +25,39 @@ namespace metakazz{
 
         public float SquareAvoidanceRadius { get => avoidRadius; }
 
+        /*Events*/
+        public event Action<HerdAgent> AgentAdded;
+
         // Start is called before the first frame update
         void Start()
         {
             if(startingCount > 0)
+            {
                 GenerateAgents();
+                InitializeBehaviors();
+            }
+
         }
 
         // Update is called once per frame
         void Update()
         {
             ApplyAgentBehaviors();
+        }
+
+        public void AddAgent(HerdAgent ha)
+        {
+            herdAgents.Add(ha);
+        }
+
+        public void RemoveAgent(HerdAgent ha)
+        {
+            herdAgents.Remove(ha);
+        }
+
+        private void InitializeBehaviors()
+        {
+            behavior.Initialize();
         }
 
         private void ApplyAgentBehaviors()
@@ -68,6 +90,8 @@ namespace metakazz{
                     );
                 newAgent.name = "Agent " + i;
                 herdAgents.Add(newAgent);
+
+                AgentAdded?.Invoke(newAgent);
             }
         }
 
