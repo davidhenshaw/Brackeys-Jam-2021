@@ -62,12 +62,14 @@ namespace metakazz{
         public void AddAgent(HerdAgent ha)
         {
             herdAgents.Add(ha);
+            ha.transform.SetParent(this.transform);
             AgentAdded?.Invoke(ha);
         }
 
         public void RemoveAgent(HerdAgent ha)
         {
             herdAgents.Remove(ha);
+            ha.transform.SetParent(null);
             AgentRemoved?.Invoke(ha);
         }
 
