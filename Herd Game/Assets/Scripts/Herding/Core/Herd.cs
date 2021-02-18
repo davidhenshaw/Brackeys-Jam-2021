@@ -25,6 +25,7 @@ namespace metakazz{
         public float maxSpeed;
 
         public float SquareAvoidanceRadius { get => avoidRadius; }
+        public int AgentCount { get => GetComponentsInChildren<HerdAgent>().Length; }
 
         /*Events*/
         public event Action<HerdAgent> AgentAdded;
