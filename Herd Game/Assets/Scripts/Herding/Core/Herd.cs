@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using metakazz.Util;
 
 namespace metakazz{
 
@@ -27,6 +28,18 @@ namespace metakazz{
 
         /*Events*/
         public event Action<HerdAgent> AgentAdded;
+        public event Action<HerdAgent> AgentRemoved;
+
+        /*Anchors*/ [Space]
+        public TransformAnchor mainHerdAnchor;
+
+        private void Awake()
+        {
+            if(mainHerdAnchor != null)
+            {
+                mainHerdAnchor.Transform = transform;
+            }
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -48,11 +61,13 @@ namespace metakazz{
         public void AddAgent(HerdAgent ha)
         {
             herdAgents.Add(ha);
+            AgentAdded?.Invoke(ha);
         }
 
         public void RemoveAgent(HerdAgent ha)
         {
             herdAgents.Remove(ha);
+            AgentRemoved?.Invoke(ha);
         }
 
         private void InitializeBehaviors()

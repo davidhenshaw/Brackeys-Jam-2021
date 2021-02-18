@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using metakazz.Util;
+using UnityEditor;
 
 namespace metakazz{
     [CreateAssetMenu(menuName = "HerdBehavior/Transform Boundary")]
@@ -11,11 +12,13 @@ namespace metakazz{
         public TransformEventSO leftClickEvent;
         public float radius = 15f;
 
-        Vector2 targetPosition = Vector2.zero;
+        [HideInInspector]
+        public Vector2 targetPosition = Vector2.zero;
 
         public override void Initialize()
         {
             leftClickEvent.OnEventRaised += OnLeftClick;
+            targetPosition = Vector2.zero;
         }
 
         public override Vector2 CalculateMove(HerdAgent agent, List<Transform> context, Herd herd)
@@ -28,6 +31,7 @@ namespace metakazz{
             {
                 return Vector2.zero;
             }
+
 
             return centerOffset * t * t;
         }

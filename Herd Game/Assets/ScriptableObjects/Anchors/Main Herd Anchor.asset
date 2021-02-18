@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bc2adfc7e4213c4c8e6af520d08d94c, type: 3}
-  m_Name: Mouse Boundary
+  m_Script: {fileID: 11500000, guid: 69929d85997160e4ba4c73b71c6609ff, type: 3}
+  m_Name: Main Herd Anchor
   m_EditorClassIdentifier: 
-  leftClickEvent: {fileID: 11400000, guid: f215705a44bd2924d82aa141bd2f4428, type: 2}
-  radius: 5
-  targetPosition: {x: -17.071096, y: -11.364956}
+  isSet: 0

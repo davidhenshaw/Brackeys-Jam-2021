@@ -35,7 +35,7 @@ namespace metakazz.Util
             //Get mouse position from input system
             Vector3 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             //Set my position to the mouse position
-            transform.position = mousePos;
+            transform.position = new Vector3(mousePos.x, mousePos.y, 0);
 
             if(Input.GetMouseButtonDown(0))
             {
@@ -47,6 +47,7 @@ namespace metakazz.Util
                 rmbDownEvent.RaiseEvent(transform);
             }
         }
+
     }
 
 
