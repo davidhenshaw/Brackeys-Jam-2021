@@ -70,6 +70,8 @@ namespace metakazz{
             GUILayout.EndVertical();
 
             behavior.weights = this.weights;
+
+            EditorUtility.SetDirty(target);
         }
     }
 }
