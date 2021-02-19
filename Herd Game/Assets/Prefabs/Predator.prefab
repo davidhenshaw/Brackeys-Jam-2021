@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2562443965336291190}
   - component: {fileID: 2562443965336291191}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 79480878942990047}
   - component: {fileID: 2562443965739279683}
   - component: {fileID: 2562443965739279686}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Predator
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 303278241184026691}
   - component: {fileID: 4193342377087692851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,8 +93,8 @@ GameObject:
   - component: {fileID: 1809263987903779853}
   - component: {fileID: 6075829798759088836}
   - component: {fileID: 7838056176560883224}
-  m_Layer: 0
-  m_Name: Herd Agent
+  m_Layer: 8
+  m_Name: Wildebeest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

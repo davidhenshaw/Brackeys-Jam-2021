@@ -4,16 +4,19 @@ using UnityEngine;
 
 namespace metakazz
 {
-    [CreateAssetMenu(menuName ="Herd Filter/Same Herd")]
-    public class SameHerdFilter : ContextFilter
+    [CreateAssetMenu(menuName = "Herd Filter/Physics Layer")]
+    public class PhysicsLayerFilter : ContextFilter
     {
+        public LayerMask layerMask;
+
         public override List<Transform> Filter(HerdAgent agent, List<Transform> input)
         {
             List<Transform> filtered = new List<Transform>();
-            foreach(Transform item in input)
+
+            foreach (Transform item in input)
             {
-                HerdAgent itemAgent = item.GetComponent<HerdAgent>();
-                if(itemAgent != null && itemAgent.AgentHerd == agent.AgentHerd)
+                //If the item's layer matches at least one layer of my layerMask
+                if(layerMask == (layerMask | 1 << item.gameObject.layer))
                 {
                     filtered.Add(item);
                 }
