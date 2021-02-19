@@ -611,7 +611,7 @@ MonoBehaviour:
   avoidRadius: 2
   speedMultiplier: 1
   maxSpeed: 7.1
-  mainHerdAnchor: {fileID: 11400000, guid: b394b388ac591c440be165e95cd3ecc3, type: 2}
+  mainHerdAnchor: {fileID: 0}
 --- !u!4 &1178256411
 Transform:
   m_ObjectHideFlags: 0
