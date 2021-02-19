@@ -103,7 +103,7 @@ namespace metakazz{
             {
                 HerdAgent newAgent = Instantiate(
                     agentPrefab,
-                    UnityEngine.Random.insideUnitCircle * startingCount * (1/agentDensity),
+                    (Vector2)transform.position + UnityEngine.Random.insideUnitCircle * startingCount * (1/agentDensity),
                     Quaternion.Euler(Vector3.forward * UnityEngine.Random.Range(0f, 360f)),
                     transform
                     );

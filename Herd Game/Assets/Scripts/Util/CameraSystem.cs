@@ -18,14 +18,13 @@ namespace metakazz
         private void Awake()
         {
             cameraAnchor.Transform = Camera.main.transform;
-
-            
         }
 
         private void Start()
         {
             mainHerd = mainHerdAnchor.Transform.GetComponent<Herd>();
-            mainHerd.AgentAdded += OnHerdAgentAdded;            
+            mainHerd.AgentAdded += OnHerdAgentAdded;
+            mainHerd.AgentRemoved += OnHerdAgentRemoved;
         }
 
         private void OnEnable()
@@ -41,6 +40,11 @@ namespace metakazz
         public void OnHerdAgentAdded(HerdAgent a)
         {
             targetGroup.AddMember(a.transform, 1, 0);
+        }
+
+        public void OnHerdAgentRemoved(HerdAgent a)
+        {
+            targetGroup.RemoveMember(a.transform);
         }
     }
 }

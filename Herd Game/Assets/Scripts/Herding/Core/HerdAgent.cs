@@ -35,6 +35,7 @@ namespace metakazz{
         public void Die()
         {
             myHerd.RemoveAgent(this);
+            myCollider.enabled = false;
         }
     }
 }
