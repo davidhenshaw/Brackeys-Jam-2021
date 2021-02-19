@@ -5,7 +5,7 @@ using UnityEngine;
 namespace metakazz
 {
     [CreateAssetMenu(menuName = "HerdBehavior/Smooth Cohesion")]
-    public class SmoothCohesionBehavior : HerdBehavior
+    public class SmoothCohesionBehavior : FilteredHerdBehavior
     {
         Vector2 currentVelocity;
         public float turnSmoothTime = 0.5f;
@@ -19,7 +19,9 @@ namespace metakazz
             // Average all context positions
             Vector2 average = Vector2.zero;
             Vector2 movement = Vector2.zero;
-            foreach (Transform item in context)
+            List<Transform> filteredContext = filter == null ? context : filter.Filter(agent, context);
+
+            foreach (Transform item in filteredContext)
             {
                 average += (Vector2)item.position;
             }

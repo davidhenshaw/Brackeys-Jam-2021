@@ -5,7 +5,7 @@ using UnityEngine;
 namespace metakazz
 {
     [CreateAssetMenu(menuName = "HerdBehavior/Alignment")]
-    public class AlignmentBehavior : HerdBehavior
+    public class AlignmentBehavior : FilteredHerdBehavior
     {
         public override Vector2 CalculateMove(HerdAgent agent, List<Transform> context, Herd herd)
         {
@@ -15,7 +15,10 @@ namespace metakazz
 
             // Average all context alignments
             Vector2 alignmentMove = Vector2.zero;
-            foreach (Transform item in context)
+
+            List<Transform> filteredContext = filter == null ? context : filter.Filter(agent, context);
+
+            foreach (Transform item in filteredContext)
             {
                 alignmentMove += (Vector2)item.transform.up;
             }

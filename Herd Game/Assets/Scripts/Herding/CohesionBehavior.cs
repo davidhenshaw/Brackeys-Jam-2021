@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace metakazz{
     [CreateAssetMenu(menuName = "HerdBehavior/Cohesion")]
-    public class CohesionBehavior : HerdBehavior
+    public class CohesionBehavior : FilteredHerdBehavior
     {
         public override Vector2 CalculateMove(HerdAgent agent, List<Transform> context, Herd herd)
         {
@@ -15,7 +15,10 @@ namespace metakazz{
             // Average all context positions
             Vector2 average = Vector2.zero;
             Vector2 movement = Vector2.zero;
-            foreach(Transform item in context)
+
+            List<Transform> filteredContext = filter == null ? context : filter.Filter(agent, context);
+
+            foreach (Transform item in filteredContext)
             {
                 average += (Vector2)item.position;
             }

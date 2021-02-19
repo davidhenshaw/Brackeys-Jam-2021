@@ -63,6 +63,7 @@ namespace metakazz{
         {
             herdAgents.Add(ha);
             ha.transform.SetParent(this.transform);
+            ha.SetHerd(this);
             AgentAdded?.Invoke(ha);
         }
 
@@ -107,8 +108,8 @@ namespace metakazz{
                     transform
                     );
                 newAgent.name = "Agent " + i;
+                newAgent.SetHerd(this);
                 herdAgents.Add(newAgent);
-
                 AgentAdded?.Invoke(newAgent);
             }
         }

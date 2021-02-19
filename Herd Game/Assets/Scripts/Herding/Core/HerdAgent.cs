@@ -17,6 +17,11 @@ namespace metakazz{
             myHerd = GetComponentInParent<Herd>();
         }
 
+        public void SetHerd(Herd h)
+        {
+            myHerd = h;
+        }
+
         // Update is called once per frame
         public void Move(Vector2 velocity)
         {
