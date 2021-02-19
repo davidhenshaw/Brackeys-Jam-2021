@@ -269,7 +269,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -552,11 +552,11 @@ MonoBehaviour:
   agentPrefab: {fileID: 1809263987903779853, guid: 4939d7874c712184dafd5426331b4dae,
     type: 3}
   behavior: {fileID: 11400000, guid: 593165af5a1fe004598dd90ac49678fb, type: 2}
-  startingCount: 10
+  startingCount: 1
   agentDensity: 6.85
   neighborRadius: 1.49
   avoidRadius: 2
-  speedMultiplier: 3.24
+  speedMultiplier: 1.67
   maxSpeed: 7.1
   mainHerdAnchor: {fileID: 11400000, guid: b394b388ac591c440be165e95cd3ecc3, type: 2}
 --- !u!4 &1069800800
@@ -605,11 +605,11 @@ MonoBehaviour:
   agentPrefab: {fileID: 1809263987903779853, guid: 4939d7874c712184dafd5426331b4dae,
     type: 3}
   behavior: {fileID: 11400000, guid: 7e9b5e4a88800b34babd8b52a702dfb9, type: 2}
-  startingCount: 10
+  startingCount: 9
   agentDensity: 6.85
   neighborRadius: 1.49
   avoidRadius: 2
-  speedMultiplier: 3.24
+  speedMultiplier: 1
   maxSpeed: 7.1
   mainHerdAnchor: {fileID: 11400000, guid: b394b388ac591c440be165e95cd3ecc3, type: 2}
 --- !u!4 &1178256411
