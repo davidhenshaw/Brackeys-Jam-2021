@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5272b15341b8c144ba6eeda67859c456, type: 3}
   m_Name: Recruitment
   m_EditorClassIdentifier: 
-  filter: {fileID: 0}
+  filter: {fileID: 11400000, guid: 4e92ca8401be5ba4ab1462308bcba219, type: 2}

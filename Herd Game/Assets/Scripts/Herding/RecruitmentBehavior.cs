@@ -15,6 +15,11 @@ namespace metakazz
             {
                 HerdAgent itemAgent = item.GetComponent<HerdAgent>();
 
+                //Remove from old herd if it had one
+                if(itemAgent.AgentHerd != null)
+                    itemAgent.AgentHerd.RemoveAgent(itemAgent);
+
+                //Add to the new herd
                 agent.AgentHerd.AddAgent(itemAgent);
             }
 

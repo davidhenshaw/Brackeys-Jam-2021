@@ -10,6 +10,9 @@ namespace metakazz{
     {
         [SerializeField] HerdAgent agentPrefab;
         List<HerdAgent> herdAgents = new List<HerdAgent>();
+        List<HerdAgent> agentsToAdd = new List<HerdAgent>();
+        List<HerdAgent> agentsToRemove = new List<HerdAgent>();
+
         public HerdBehavior behavior;
         [Range(0, 100)]
         public int startingCount = 10;
@@ -59,9 +62,14 @@ namespace metakazz{
             ApplyAgentBehaviors();
         }
 
+        private void LateUpdate()
+        {
+            AdjustAgentList();
+        }
+
         public void AddAgent(HerdAgent ha)
         {
-            herdAgents.Add(ha);
+            agentsToAdd.Add(ha);
             ha.transform.SetParent(this.transform);
             ha.SetHerd(this);
             AgentAdded?.Invoke(ha);
@@ -69,9 +77,21 @@ namespace metakazz{
 
         public void RemoveAgent(HerdAgent ha)
         {
-            herdAgents.Remove(ha);
+            agentsToRemove.Add(ha);
             ha.transform.SetParent(null);
+            ha.SetHerd(null);
             AgentRemoved?.Invoke(ha);
+        }
+
+        private void AdjustAgentList()
+        {
+            Predicate<HerdAgent> filter = (a) => { return agentsToRemove.Contains(a); };
+            herdAgents.RemoveAll(filter);
+
+            herdAgents.AddRange(agentsToAdd);
+
+            agentsToAdd.Clear();
+            agentsToRemove.Clear();
         }
 
         private void InitializeBehaviors()

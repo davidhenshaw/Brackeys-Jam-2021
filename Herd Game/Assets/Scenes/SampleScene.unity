@@ -149,7 +149,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &500928490
 GameObject:
@@ -269,7 +269,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -530,7 +530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1069800800}
   - component: {fileID: 1069800799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Herd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,9 +551,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentPrefab: {fileID: 1809263987903779853, guid: 4939d7874c712184dafd5426331b4dae,
     type: 3}
-  behavior: {fileID: 11400000, guid: d744e28a7418d9c44ad8306dab1ea8ac, type: 2}
+  behavior: {fileID: 11400000, guid: 593165af5a1fe004598dd90ac49678fb, type: 2}
   startingCount: 10
-  agentDensity: 5.75
+  agentDensity: 6.85
   neighborRadius: 1.49
   avoidRadius: 2
   speedMultiplier: 3.24
@@ -572,6 +572,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1178256409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1178256411}
+  - component: {fileID: 1178256410}
+  m_Layer: 8
+  m_Name: 'Herd '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1178256410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178256409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0198ef3d99812b54c9bd73111ccb817d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentPrefab: {fileID: 1809263987903779853, guid: 4939d7874c712184dafd5426331b4dae,
+    type: 3}
+  behavior: {fileID: 11400000, guid: 7e9b5e4a88800b34babd8b52a702dfb9, type: 2}
+  startingCount: 10
+  agentDensity: 6.85
+  neighborRadius: 1.49
+  avoidRadius: 2
+  speedMultiplier: 3.24
+  maxSpeed: 7.1
+  mainHerdAnchor: {fileID: 11400000, guid: b394b388ac591c440be165e95cd3ecc3, type: 2}
+--- !u!4 &1178256411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178256409}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.09, y: -10.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1357348124
 GameObject:
@@ -639,7 +692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1391959855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,7 +727,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1589412565
 GameObject:
@@ -832,7 +885,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1867783895
 GameObject:
@@ -1087,10 +1140,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Predator
       objectReference: {fileID: 0}
+    - target: {fileID: 2562443965739279682, guid: 3eb3f5a2d9e13a84aa04a2e3d848b939,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2562443965739279685, guid: 3eb3f5a2d9e13a84aa04a2e3d848b939,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2562443965739279685, guid: 3eb3f5a2d9e13a84aa04a2e3d848b939,
         type: 3}
