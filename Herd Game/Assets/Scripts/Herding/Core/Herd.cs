@@ -59,12 +59,14 @@ namespace metakazz{
         // Update is called once per frame
         void Update()
         {
+            AdjustAgentList();
+
             ApplyAgentBehaviors();
         }
 
         private void LateUpdate()
         {
-            AdjustAgentList();
+            //AdjustAgentList();
         }
 
         public void AddAgent(HerdAgent ha)
