@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 176057132}
   m_Layer: 0
-  m_Name: -------------------------------
+  m_Name: -----------------------------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,7 +322,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -606,7 +606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1031207099}
   m_Layer: 0
-  m_Name: '----------------CAMERAS--------------- '
+  m_Name: '----------CAMERAS--------------- '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -663,7 +663,7 @@ MonoBehaviour:
   neighborRadius: 1.49
   avoidRadius: 2
   speedMultiplier: 1.67
-  maxSpeed: 7.1
+  maxSpeed: 5
   mainHerdAnchor: {fileID: 11400000, guid: b394b388ac591c440be165e95cd3ecc3, type: 2}
 --- !u!4 &1069800800
 Transform:
@@ -813,13 +813,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentPrefab: {fileID: 79480878942990047, guid: 3eb3f5a2d9e13a84aa04a2e3d848b939,
     type: 3}
-  behavior: {fileID: 11400000, guid: 7e9b5e4a88800b34babd8b52a702dfb9, type: 2}
-  startingCount: 3
+  behavior: {fileID: 11400000, guid: 8c22933fd62d62541bb73940a1027c9c, type: 2}
+  startingCount: 5
   agentDensity: 0.09
   neighborRadius: 4.02
   avoidRadius: 1.99
-  speedMultiplier: 1.47
-  maxSpeed: 4.6
+  speedMultiplier: 1.63
+  maxSpeed: 5.2
   mainHerdAnchor: {fileID: 0}
 --- !u!4 &1391959856
 Transform:
