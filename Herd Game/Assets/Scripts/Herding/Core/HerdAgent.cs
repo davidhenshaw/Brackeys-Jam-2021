@@ -14,13 +14,16 @@ namespace metakazz{
         public Collider2D AgentCollider { get { return myCollider; } }
         public Herd AgentHerd { get => myHerd; }
 
-        // Start is called before the first frame update
-        void Start()
+        private void Awake()
         {
             myCollider = GetComponent<Collider2D>();
             myHerd = GetComponentInParent<Herd>();
-            directionIndicator = GetComponentInChildren<SpriteRenderer>();
+            directionIndicator = GetComponentInChildren<SpriteRenderer>();            
+        }
 
+        // Start is called before the first frame update
+        void Start()
+        {
             IconFactory.instance.GenerateIcon(transform, icon);
         }
 
