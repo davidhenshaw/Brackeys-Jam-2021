@@ -7,6 +7,9 @@ namespace metakazz{
     {
         Collider2D myCollider;
         Herd myHerd;
+
+        public Sprite icon;
+
         public Collider2D AgentCollider { get { return myCollider; } }
         public Herd AgentHerd { get => myHerd; }
 
@@ -15,6 +18,8 @@ namespace metakazz{
         {
             myCollider = GetComponent<Collider2D>();
             myHerd = GetComponentInParent<Herd>();
+
+            IconFactory.instance.GenerateIcon(transform, icon);
         }
 
         public void SetHerd(Herd h)
