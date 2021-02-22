@@ -863,8 +863,8 @@ MonoBehaviour:
   agentDensity: 0.5
   neighborRadius: 4.02
   avoidRadius: 1.99
-  speedMultiplier: 1.63
-  maxSpeed: 5.2
+  speedMultiplier: 2.03
+  maxSpeed: 6
   mainHerdAnchor: {fileID: 0}
 --- !u!4 &1391959856
 Transform:
