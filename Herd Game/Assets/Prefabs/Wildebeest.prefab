@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4193342377087692851}
   - component: {fileID: 9161721047315948361}
   m_Layer: 8
-  m_Name: Sprite
+  m_Name: Direction Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

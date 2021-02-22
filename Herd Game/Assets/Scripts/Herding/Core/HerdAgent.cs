@@ -9,6 +9,7 @@ namespace metakazz{
         Herd myHerd;
 
         public Sprite icon;
+        SpriteRenderer directionIndicator;
 
         public Collider2D AgentCollider { get { return myCollider; } }
         public Herd AgentHerd { get => myHerd; }
@@ -18,6 +19,7 @@ namespace metakazz{
         {
             myCollider = GetComponent<Collider2D>();
             myHerd = GetComponentInParent<Herd>();
+            directionIndicator = GetComponentInChildren<SpriteRenderer>();
 
             IconFactory.instance.GenerateIcon(transform, icon);
         }
@@ -30,8 +32,16 @@ namespace metakazz{
         // Update is called once per frame
         public void Move(Vector2 velocity)
         {
-            if(velocity.magnitude > 0)
+            if (velocity.magnitude > 0)
+            {
                 transform.up = velocity.normalized;
+                directionIndicator.enabled = true;
+            }
+            else
+            {
+                directionIndicator.enabled = false;
+            }
+
 
             transform.position += (Vector3)velocity * Time.deltaTime;
         }
@@ -41,6 +51,7 @@ namespace metakazz{
         {
             myHerd.RemoveAgent(this);
             myCollider.enabled = false;
+            directionIndicator.enabled = false;
         }
     }
 }
