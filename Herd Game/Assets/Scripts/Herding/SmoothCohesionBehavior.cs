@@ -21,6 +21,9 @@ namespace metakazz
             Vector2 movement = Vector2.zero;
             List<Transform> filteredContext = filter == null ? context : filter.Filter(agent, context);
 
+            if (filteredContext.Count == 0)
+                return Vector2.zero;
+
             foreach (Transform item in filteredContext)
             {
                 average += (Vector2)item.position;

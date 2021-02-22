@@ -23,18 +23,11 @@ namespace metakazz
         private void Start()
         {
             mainHerd = mainHerdAnchor.Transform.GetComponent<Herd>();
-            mainHerd.AgentAdded += OnHerdAgentAdded;
-            mainHerd.AgentRemoved += OnHerdAgentRemoved;
-        }
-
-        private void OnEnable()
-        {
-            //mainHerd.AgentAdded += OnHerdAgentAdded;
-        }
-
-        private void OnDisable()
-        {
-            //mainHerd.AgentAdded -= OnHerdAgentAdded;
+            if (mainHerd != null)
+            {
+                mainHerd.AgentAdded += OnHerdAgentAdded;
+                mainHerd.AgentRemoved += OnHerdAgentRemoved;
+            }
         }
 
         public void OnHerdAgentAdded(HerdAgent a)

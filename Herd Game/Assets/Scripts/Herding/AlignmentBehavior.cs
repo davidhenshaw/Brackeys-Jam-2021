@@ -14,7 +14,7 @@ namespace metakazz
                 return agent.transform.up;
 
             // Average all context alignments
-            Vector2 alignmentMove = Vector2.zero;
+            Vector2 alignmentMove = agent.transform.up;
 
             List<Transform> filteredContext = filter == null ? context : filter.Filter(agent, context);
 
