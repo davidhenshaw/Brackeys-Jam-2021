@@ -28,7 +28,7 @@ namespace metakazz
             }
         }
 
-        public void GenerateIcon(Transform parent, Sprite icon)
+        public GameObject GenerateIcon(Transform parent, Sprite icon)
         {
             ParentConstraint newConstraint = Instantiate(iconPrefab, this.transform);
             SpriteRenderer spriteRenderer = newConstraint.GetComponent<SpriteRenderer>();
@@ -40,6 +40,8 @@ namespace metakazz
             source.weight = 1;
 
             newConstraint.AddSource(source);
+
+            return newConstraint.gameObject;
         }
     }
 }

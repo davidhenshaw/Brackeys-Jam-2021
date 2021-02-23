@@ -22,7 +22,7 @@ namespace metakazz{
                 movement += weightedMove;
             }
 
-            return movement;
+            return movement.normalized;
         }
 
         public override void Initialize()

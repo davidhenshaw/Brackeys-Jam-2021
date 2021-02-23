@@ -14,6 +14,8 @@ namespace metakazz{
         List<HerdAgent> agentsToRemove = new List<HerdAgent>();
 
         public HerdBehavior behavior;
+        public HerdBehaviorModifyer modifyer;
+
         [Range(0, 100)]
         public int startingCount = 10;
         [Range(0.001f, 10)]
@@ -112,7 +114,9 @@ namespace metakazz{
 
                 Vector2 move = behavior.CalculateMove(agent, context, this);
 
-                move *= speedMultiplier;
+                float speedMod = (modifyer != null) ? modifyer.CalculateMoveModifyer(agent, context, this) : 1;
+
+                move *= speedMultiplier * speedMod;
                 move = ClampSquared(move, maxSpeed);
 
                 agent.Move(move);

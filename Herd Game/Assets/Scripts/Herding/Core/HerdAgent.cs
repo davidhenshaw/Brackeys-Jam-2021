@@ -7,10 +7,12 @@ namespace metakazz{
     {
         Collider2D myCollider;
         Herd myHerd;
+        GameObject icon;
 
-        public Sprite icon;
+        public Sprite sprite;
         SpriteRenderer directionIndicator;
 
+        public GameObject Icon { get => icon; }
         public Collider2D AgentCollider { get { return myCollider; } }
         public Herd AgentHerd { get => myHerd; }
 
@@ -24,7 +26,7 @@ namespace metakazz{
         // Start is called before the first frame update
         void Start()
         {
-            IconFactory.instance.GenerateIcon(transform, icon);
+            icon = IconFactory.instance.GenerateIcon(transform, sprite);
         }
 
         public void SetHerd(Herd h)

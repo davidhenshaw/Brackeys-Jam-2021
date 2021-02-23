@@ -11,6 +11,8 @@ namespace metakazz{
         //public TransformAnchor tfAnchor;
         public TransformEventSO leftClickEvent;
         public float radius = 15f;
+        [Range(0,1)]
+        public float maxThreshold = 0.9f;
 
         [HideInInspector]
         public Vector2 targetPosition = Vector2.zero;
@@ -26,7 +28,7 @@ namespace metakazz{
             Vector2 centerOffset = targetPosition - (Vector2)agent.transform.position;
             float t = centerOffset.magnitude / radius;
 
-            float maxThreshold = 0.9f;
+
             if (t < maxThreshold)
             {
                 return Vector2.zero;
