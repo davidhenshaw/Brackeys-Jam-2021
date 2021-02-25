@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7c7d10860f817f4cb23f3620b058833, type: 3}
-  m_Name: Mouse-Bound Composite 2
+  m_Name: Player Default Composite
   m_EditorClassIdentifier: 
   behaviors:
   - {fileID: 11400000, guid: da561c1bec247784199549ff636a1097, type: 2}
@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c4ba4b1827e85ee49bf2f019f5f5dd58, type: 2}
   weights:
   - 0.93
-  - 0.8
+  - 2.11
   - 1.19
   - 1
-  - 0.13
+  - 0.12
