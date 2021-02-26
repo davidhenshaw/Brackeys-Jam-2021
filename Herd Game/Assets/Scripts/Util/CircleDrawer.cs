@@ -21,13 +21,15 @@ namespace metakazz{
 
         private void Start()
         {
-            if(centerSO != null)
+            lineRenderer = GetComponent<LineRenderer>();
+
+            if (centerSO != null)
                 centerSO.OnEventRaised += OnLeftClick;
         }
 
-        private void Update()
+        private void OnDestroy()
         {
-            //Draw();
+            centerSO.OnEventRaised -= OnLeftClick;
         }
 
         void OnLeftClick(Transform t)

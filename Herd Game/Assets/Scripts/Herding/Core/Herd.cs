@@ -66,11 +66,6 @@ namespace metakazz{
             ApplyAgentBehaviors();
         }
 
-        private void LateUpdate()
-        {
-            //AdjustAgentList();
-        }
-
         public void AddAgent(HerdAgent ha)
         {
             agentsToAdd.Add(ha);

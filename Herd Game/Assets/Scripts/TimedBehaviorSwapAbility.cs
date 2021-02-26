@@ -4,36 +4,33 @@ using UnityEngine;
 
 namespace metakazz
 {
-    public class BehaviorSwapAbility : Ability
+    [CreateAssetMenu(menuName = "Herd Ability/Timed Behavior Swap")]
+    public class TimedBehaviorSwapAbility : Ability
     {
         HerdBehavior behaviorCache;
         public HerdBehavior newBehavior;
-        Herd targetHerd;
         [Space]
         public float duration;
         float elapsed;
         bool isActive;
 
-        private void Awake()
+        private void OnEnable()
         {
-            targetHerd = GetComponent<Herd>();
-            behaviorCache = targetHerd.behavior;
+            isReady = true;
         }
 
-        protected override void DoAbility()
+        public override IEnumerator DoAbility(Herd targetHerd)
         {
             behaviorCache = targetHerd.behavior;
 
             targetHerd.behavior = newBehavior;
             isActive = true;
-            StartCoroutine(AbilityDuration_co(duration));
-        }
 
-        IEnumerator AbilityDuration_co(float time)
-        {
-            yield return new WaitForSeconds(time);
+            yield return new WaitForSeconds(duration);
+
+            isActive = false;
+            isReady = true;
             targetHerd.behavior = behaviorCache;
         }
-
     }
 }

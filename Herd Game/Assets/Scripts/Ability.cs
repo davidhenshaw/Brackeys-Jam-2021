@@ -2,37 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace metakazz{
-    public abstract class Ability : MonoBehaviour
+namespace metakazz
+{
+    public abstract class Ability : ScriptableObject
     {
         public float coolTime;
-        bool isReady = true;
+        protected bool isReady = true;
 
         public bool IsReady { get => isReady; }
 
-        Coroutine cooldownCoroutine;
-
-        public bool TryActivate()
+        public bool TryActivate(Herd targetHerd)
         {
             if(isReady)
             {
-                DoAbility();
-
-                cooldownCoroutine = StartCoroutine(Cooldown_co(coolTime));
-
+                DoAbility(targetHerd);
                 return true;
             }
 
             return false;
         }
 
-        IEnumerator Cooldown_co(float time)
+        public IEnumerator Cooldown()
         {
             isReady = false;
-            yield return new WaitForSeconds(time);
+            yield return new WaitForSeconds(coolTime);
             isReady = true;
         }
 
-        protected abstract void DoAbility();
+        public abstract IEnumerator DoAbility(Herd herd);
     }
 }

@@ -6,11 +6,11 @@ namespace metakazz{
     public class HerdController : MonoBehaviour
     {
         public Ability scatterAbility;
+        Herd targetHerd;
 
-        // Start is called before the first frame update
-        void Start()
+        private void Awake()
         {
-            
+            targetHerd = GetComponent<Herd>();    
         }
 
         // Update is called once per frame
@@ -18,8 +18,19 @@ namespace metakazz{
         {
             if(Input.GetKeyDown(KeyCode.Alpha1))
             {
-                if(scatterAbility != null)
-                    scatterAbility.TryActivate();
+                TriggerAbility(scatterAbility);
+            }
+        }
+
+        void TriggerAbility(Ability a)
+        {
+            if (a == null)
+                return;
+
+            if(a.IsReady)
+            {
+                StartCoroutine(a.DoAbility(targetHerd));
+                StartCoroutine(a.Cooldown());
             }
         }
     }
