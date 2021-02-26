@@ -31,7 +31,7 @@ namespace metakazz
             average /= context.Count;
             movement = average - (Vector2)agent.transform.position;
 
-            movement = Vector2.SmoothDamp(agent.transform.up, movement, ref currentVelocity, turnSmoothTime);
+            //movement = Vector2.SmoothDamp(agent.transform.up, movement, ref currentVelocity, turnSmoothTime);
 
             return movement;
         }

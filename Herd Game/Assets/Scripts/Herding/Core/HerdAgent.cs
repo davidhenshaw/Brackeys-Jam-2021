@@ -8,6 +8,9 @@ namespace metakazz{
         Collider2D myCollider;
         Herd myHerd;
         GameObject icon;
+        Vector2 dampVelocity;
+        Vector2 currVelocity;
+        public float smoothTurnTime = 0.25f;
 
         public Sprite sprite;
         SpriteRenderer directionIndicator;
@@ -35,11 +38,11 @@ namespace metakazz{
         }
 
         // Update is called once per frame
-        public void Move(Vector2 velocity)
+        public void Move(Vector2 targetVelocity)
         {
-            if (velocity.magnitude > 0)
+            if (currVelocity.magnitude > 0)
             {
-                transform.up = velocity.normalized;
+                transform.up = currVelocity.normalized;
                 directionIndicator.enabled = true;
             }
             else
@@ -47,8 +50,9 @@ namespace metakazz{
                 directionIndicator.enabled = false;
             }
 
+            currVelocity = Vector2.SmoothDamp(currVelocity, targetVelocity, ref dampVelocity, smoothTurnTime);
 
-            transform.position += (Vector3)velocity * Time.deltaTime;
+            transform.position += (Vector3)currVelocity * Time.deltaTime;
         }
 
         [ContextMenu("Die")]
