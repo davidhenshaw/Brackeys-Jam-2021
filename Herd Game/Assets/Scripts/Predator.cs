@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace metakazz{
-    public class Predator : MonoBehaviour
+namespace metakazz
+{
+    public class Predator : HerdAgent
     {
+        float minPreyKillSpeed = 3;
 
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            HerdAgent agent = collision.gameObject.GetComponent<HerdAgent>();
+        //private void OnTriggerEnter2D(Collider2D collision)
+        //{
+        //    Prey agent = collision.gameObject.GetComponent<Prey>();
 
-            if(agent != null)
-            {
-                agent.Die();
-            }
-        }
+        //    if(agent != null)
+        //    {
+        //        agent.Die();
+        //    }
+        //}
     }
 }

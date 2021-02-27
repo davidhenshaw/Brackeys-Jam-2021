@@ -92,7 +92,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2562443965739279685}
   - component: {fileID: 2562443965739279684}
-  - component: {fileID: 79480878942990047}
   - component: {fileID: 2562443965739279683}
   - component: {fileID: 2562443965739279686}
   m_Layer: 9
@@ -129,18 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66efd0df0eccdb144b2670575e67bd53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &79480878942990047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2562443965739279682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3446ff0ce4f170549b4208abe8de1a79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  smoothTurnTime: 0.25
   sprite: {fileID: 21300000, guid: c1542334018815c4eb8953d8b54c8490, type: 3}
 --- !u!58 &2562443965739279683
 CircleCollider2D:

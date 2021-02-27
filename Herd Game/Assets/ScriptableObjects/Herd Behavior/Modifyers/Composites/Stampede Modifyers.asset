@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91e03b21f0322e142b13f35d9fddfe57, type: 3}
-  m_Name: Smooth Cohesion
+  m_Script: {fileID: 11500000, guid: 9f25fc142bcd7f0468f6c2720190d78d, type: 3}
+  m_Name: Stampede Modifyers
   m_EditorClassIdentifier: 
-  filter: {fileID: 0}
-  turnSmoothTime: 0.55
+  contextFilter: {fileID: 0}
+  modifyers:
+  - {fileID: 11400000, guid: 9ad62254c04ffd14a8ec4e4bc939e5fc, type: 2}
+  - {fileID: 11400000, guid: 19ac6443fccb60b4498fcdfb017b9703, type: 2}

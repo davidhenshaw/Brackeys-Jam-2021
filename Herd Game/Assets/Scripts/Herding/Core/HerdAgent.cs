@@ -9,7 +9,7 @@ namespace metakazz{
         Herd myHerd;
         GameObject icon;
         Vector2 dampVelocity;
-        Vector2 currVelocity;
+        protected Vector2 currVelocity;
         public float smoothTurnTime = 0.25f;
 
         public Sprite sprite;
@@ -18,6 +18,7 @@ namespace metakazz{
         public GameObject Icon { get => icon; }
         public Collider2D AgentCollider { get { return myCollider; } }
         public Herd AgentHerd { get => myHerd; }
+        public Vector2 Velocity { get => currVelocity; }
 
         private void Awake()
         {
@@ -51,6 +52,9 @@ namespace metakazz{
             }
 
             currVelocity = Vector2.SmoothDamp(currVelocity, targetVelocity, ref dampVelocity, smoothTurnTime);
+
+            //Force magnitude changes immediately after they are set
+            currVelocity = currVelocity.normalized * targetVelocity.magnitude;
 
             transform.position += (Vector3)currVelocity * Time.deltaTime;
         }

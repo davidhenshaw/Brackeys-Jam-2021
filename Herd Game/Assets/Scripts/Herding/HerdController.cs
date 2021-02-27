@@ -5,7 +5,8 @@ using UnityEngine;
 namespace metakazz{
     public class HerdController : MonoBehaviour
     {
-        public Ability scatterAbility;
+        public Ability ability1;
+        public Ability ability2;
         Herd targetHerd;
 
         private void Awake()
@@ -18,7 +19,12 @@ namespace metakazz{
         {
             if(Input.GetKeyDown(KeyCode.Alpha1))
             {
-                TriggerAbility(scatterAbility);
+                TriggerAbility(ability1);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                TriggerAbility(ability2);
             }
         }
 

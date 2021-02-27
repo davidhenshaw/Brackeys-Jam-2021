@@ -1,0 +1,45 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace metakazz
+{
+    public class Prey : HerdAgent
+    {
+        [SerializeField]
+        float minPredatorKillSpeed = 6;
+
+        [Range(0,1)]
+        [SerializeField]
+        float trampleThreshold = 0.95f;
+
+        bool CanTrample(Predator p)
+        {
+            bool speedReq = currVelocity.magnitude >= minPredatorKillSpeed;
+
+            Vector2 offset = p.transform.position - this.transform.position;
+            bool angleReq = Vector2.Dot(currVelocity.normalized, offset.normalized) >= trampleThreshold;
+
+
+            return speedReq && angleReq;
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            Predator predator = collision.gameObject.GetComponent<Predator>();
+
+            if (predator != null)
+            {
+                if(CanTrample(predator))
+                {
+                    predator.Die();
+                }
+                else
+                {
+                    Die();
+                }
+
+            }
+        }
+    }
+}
