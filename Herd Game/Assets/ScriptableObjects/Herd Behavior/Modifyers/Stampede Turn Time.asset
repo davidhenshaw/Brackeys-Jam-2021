@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Stampede Turn Time
   m_EditorClassIdentifier: 
   contextFilter: {fileID: 0}
-  speedMod: 3
-  smoothTurnTime: 1
+  speedMod: 1.6
+  smoothTurnTime: 0.35

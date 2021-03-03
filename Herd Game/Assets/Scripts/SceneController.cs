@@ -18,7 +18,9 @@ namespace metakazz{
         private void Awake()
         {
             SetUpSingleton();
-            SceneManager.LoadSceneAsync("Gameplay UI", LoadSceneMode.Additive);
+
+            if(instance == this)
+                SceneManager.LoadSceneAsync("Gameplay UI", LoadSceneMode.Additive);
         }
 
         private void SetUpSingleton()

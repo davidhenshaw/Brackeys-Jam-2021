@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Predator Composite
   m_EditorClassIdentifier: 
   behaviors:
-  - {fileID: 11400000, guid: da561c1bec247784199549ff636a1097, type: 2}
+  - {fileID: 11400000, guid: 60d223cf529bac249b003b7b1652f0ef, type: 2}
   - {fileID: 11400000, guid: 936559c453daae047ab056d33679730c, type: 2}
   - {fileID: 11400000, guid: 60a421b9462662d4ab1548e85c69e46b, type: 2}
   weights:
-  - 0
-  - 1.25
+  - 1.07
+  - 0.31
   - 0

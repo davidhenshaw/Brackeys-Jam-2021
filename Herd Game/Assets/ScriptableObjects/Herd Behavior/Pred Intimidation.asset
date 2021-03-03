@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ee7fb54b21e9d249b2502b07dc709b5, type: 3}
-  m_Name: Player Default Smooth Turn
+  m_Script: {fileID: 11500000, guid: e3d35ea763987a841a980230cb7a961c, type: 3}
+  m_Name: Pred Intimidation
   m_EditorClassIdentifier: 
-  contextFilter: {fileID: 0}
-  speedMod: 1
-  smoothTurnTime: 0.15
+  filter: {fileID: 11400000, guid: 4e92ca8401be5ba4ab1462308bcba219, type: 2}
+  minToIntimidate: 3
+  minThreshold: 0.8

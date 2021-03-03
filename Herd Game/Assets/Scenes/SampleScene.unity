@@ -565,7 +565,7 @@ MonoBehaviour:
     type: 3}
   behavior: {fileID: 11400000, guid: 593165af5a1fe004598dd90ac49678fb, type: 2}
   modifyer: {fileID: 11400000, guid: 5dd07196071fca54fb16fd78a7ff2d50, type: 2}
-  startingCount: 18
+  startingCount: 15
   agentDensity: 6.85
   neighborRadius: 1.49
   avoidRadius: 2
@@ -1030,10 +1030,10 @@ MonoBehaviour:
   agentPrefab: {fileID: 2562443965739279684, guid: 3eb3f5a2d9e13a84aa04a2e3d848b939,
     type: 3}
   behavior: {fileID: 11400000, guid: 8c22933fd62d62541bb73940a1027c9c, type: 2}
-  modifyer: {fileID: 0}
+  modifyer: {fileID: 11400000, guid: 8e97e18873f9c884b9830a0a78d2a264, type: 2}
   startingCount: 5
-  agentDensity: 0.38
-  neighborRadius: 4.02
+  agentDensity: 0.23
+  neighborRadius: 5
   avoidRadius: 1.99
   speedMultiplier: 2.03
   maxSpeed: 6
@@ -1428,7 +1428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 0.058
+  m_LookaheadTime: 0.13
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
   m_XDamping: 1
