@@ -408,7 +408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 176057132}
   m_Layer: 0
-  m_Name: -----------------------------------------
+  m_Name: --------BACKGROUND--------------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1948,7 +1948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentPrefab: {fileID: 5358241987088486575, guid: 4939d7874c712184dafd5426331b4dae,
     type: 3}
-  behavior: {fileID: 11400000, guid: 593165af5a1fe004598dd90ac49678fb, type: 2}
+  behavior: {fileID: 11400000, guid: 6346ddb53ac360d419c1c397ace4085f, type: 2}
   modifyer: {fileID: 11400000, guid: 5dd07196071fca54fb16fd78a7ff2d50, type: 2}
   startingCount: 15
   agentDensity: 6.85

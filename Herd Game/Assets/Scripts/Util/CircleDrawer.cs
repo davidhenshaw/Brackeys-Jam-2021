@@ -7,6 +7,8 @@ namespace metakazz{
     [RequireComponent(typeof(LineRenderer))]
     public class CircleDrawer : MonoBehaviour
     {
+        public bool drawOnAwake;
+
         LineRenderer lineRenderer;
         public TransformEventSO centerSO;
         [Space]
@@ -25,11 +27,17 @@ namespace metakazz{
 
             if (centerSO != null)
                 centerSO.OnEventRaised += OnLeftClick;
+            else
+                center = transform;
+
+            if (drawOnAwake)
+                Draw();
         }
 
         private void OnDestroy()
         {
-            centerSO.OnEventRaised -= OnLeftClick;
+            if(centerSO != null)
+                centerSO.OnEventRaised -= OnLeftClick;
         }
 
         void OnLeftClick(Transform t)

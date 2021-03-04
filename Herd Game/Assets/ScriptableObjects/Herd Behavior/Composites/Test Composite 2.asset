@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7c7d10860f817f4cb23f3620b058833, type: 3}
-  m_Name: Player Default Composite
+  m_Name: Test Composite 2
   m_EditorClassIdentifier: 
   behaviors:
   - {fileID: 11400000, guid: da561c1bec247784199549ff636a1097, type: 2}
@@ -18,9 +18,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 79e820755837a834894f335d0b1ef77c, type: 2}
   - {fileID: 11400000, guid: 4c30334ec020e814f85c74e9bf9bc9b6, type: 2}
   - {fileID: 11400000, guid: c4ba4b1827e85ee49bf2f019f5f5dd58, type: 2}
+  - {fileID: 11400000, guid: f5c4113d0c4eeb44eb918f39b1ad689b, type: 2}
   weights:
-  - 1.17
-  - 1.35
-  - 0.46
   - 1
-  - 0.27
+  - 1.31
+  - 0.15
+  - 1
+  - 0.31
+  - 0.88
