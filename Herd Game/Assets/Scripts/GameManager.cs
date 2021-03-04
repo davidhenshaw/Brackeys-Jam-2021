@@ -10,9 +10,10 @@ namespace metakazz{
         Herd mainHerd;
 
         public int scoreToLose = 5;
-        public int scoreToWin = 8;
+        [HideInInspector] public int scoreToWin = 8;
 
         int _currScore;
+        int _numTramples;
 
         /*Events*/
         public VoidEventSO LoseEvent;
@@ -20,22 +21,48 @@ namespace metakazz{
         [Space]
         public IntEventSO AgentEnteredGoalArea;
         public IntEventSO AgentExitedGoalArea;
+        [Space]
+        public FloatAnchor mainHerdSizeAnchor;
+        public FloatAnchor trampleCountAnchor;
 
         // Start is called before the first frame update
         void Start()
         {
             mainHerd = mainHerdAnchor.Transform.GetComponent<Herd>();
+            mainHerd.AgentAdded += OnHerdAgentGained;
             mainHerd.AgentRemoved += OnHerdAgentLost;
 
-            AgentEnteredGoalArea.OnEventRaised += CheckForWin;
+            //AgentEnteredGoalArea.OnEventRaised += CheckForWin;
 
             AgentEnteredGoalArea.OnEventRaised += UpdateScore;
             AgentExitedGoalArea.OnEventRaised += UpdateScore;
+
+            mainHerdSizeAnchor.Value = mainHerd.AgentCount;
+            trampleCountAnchor.Value = 0;
+
+            Prey.PredatorTrampled += OnPredatorTrampled;
+        }
+
+        void OnHerdAgentGained(HerdAgent a)
+        {
+            if (mainHerdSizeAnchor != null)
+                mainHerdSizeAnchor.Value = mainHerd.AgentCount;
         }
 
         void OnHerdAgentLost(HerdAgent a)
         {
+            if(mainHerdSizeAnchor != null)
+                mainHerdSizeAnchor.Value = mainHerd.AgentCount;
+
             CheckForLose(mainHerd.AgentCount);
+        }
+
+        void OnPredatorTrampled(Transform t)
+        {
+            _numTramples++;
+
+            if(trampleCountAnchor != null)
+                trampleCountAnchor.Value = _numTramples;
         }
 
         void UpdateScore(int areaCount)

@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace metakazz
 {
     public class Prey : HerdAgent
     {
+        public static event Action<Transform> PredatorTrampled;
+
         [SerializeField]
         float minPredatorKillSpeed = 6;
 
@@ -33,6 +36,7 @@ namespace metakazz
                 if(CanTrample(predator))
                 {
                     predator.Die();
+                    PredatorTrampled?.Invoke(predator.transform);
                 }
                 else
                 {
