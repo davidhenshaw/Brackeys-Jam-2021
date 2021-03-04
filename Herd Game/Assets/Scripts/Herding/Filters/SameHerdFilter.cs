@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace metakazz
 {
-    [CreateAssetMenu(menuName ="Herd Filter/Same Herd")]
+    [CreateAssetMenu(menuName ="Context Filter/Same Herd")]
     public class SameHerdFilter : ContextFilter
     {
         public override List<Transform> Filter(HerdAgent agent, List<Transform> input)

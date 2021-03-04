@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace metakazz
 {
-    [CreateAssetMenu(menuName = "Context Filter/Different Herd & Physics Layer")]
-    public class DiffHerdSameLayerFilter : ContextFilter
+    [CreateAssetMenu(menuName = "Context Filter/Colliding")]
+    public class CollidingFilter : ContextFilter
     {
         public LayerMask layerMask;
 
@@ -15,14 +16,13 @@ namespace metakazz
 
             foreach (Transform item in input)
             {
-                HerdAgent otherAgent = item.GetComponent<HerdAgent>();
+                Collider2D otherAgent = item.GetComponent<Collider2D>();
 
                 //If the item's layer matches at least one layer of my layerMask
                 bool matchesLayer = layerMask == (layerMask | 1 << item.gameObject.layer);
-                // If the item is not a HerdAgent at all or if it is not in the same herd
-                bool diffHerd = (otherAgent == null) || (otherAgent.AgentHerd != agent.AgentHerd);
+                bool isTouching = (otherAgent != null) && (agent.AgentCollider.IsTouching(otherAgent));
 
-                if (matchesLayer && diffHerd)
+                if (matchesLayer && isTouching)
                 {
                     filtered.Add(item);
                 }
