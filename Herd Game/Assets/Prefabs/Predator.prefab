@@ -130,6 +130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smoothTurnTime: 0.25
   sprite: {fileID: 21300000, guid: c1542334018815c4eb8953d8b54c8490, type: 3}
+  deathAudioCue: {fileID: 11400000, guid: cf3a7c6afb4e05c48a23405d0c8589fe, type: 2}
+  lockOnAudioCue: {fileID: 11400000, guid: b4282420288455149bc59f2a8a82251a, type: 2}
 --- !u!58 &2562443965739279683
 CircleCollider2D:
   m_ObjectHideFlags: 0

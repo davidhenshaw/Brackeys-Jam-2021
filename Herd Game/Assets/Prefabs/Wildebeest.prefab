@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7204804395708042649, guid: 5eda94a9dcf71e445ad17e3c065d1460,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6, g: 0.8313726, b: 0.8000001, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -154,6 +154,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 508e25bf2032e0249aef8f9c2f2a6bb8, type: 3}
   minPredatorKillSpeed: 4
   trampleThreshold: 0
+  deathAudioCue: {fileID: 11400000, guid: 8280a1fd859b53b44ac4a714affdd0c6, type: 2}
 --- !u!58 &6075829798759088836
 CircleCollider2D:
   m_ObjectHideFlags: 0

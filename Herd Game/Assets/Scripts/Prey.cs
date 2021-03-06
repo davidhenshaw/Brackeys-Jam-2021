@@ -15,6 +15,8 @@ namespace metakazz
         [Range(0,1)]
         [SerializeField]
         float trampleThreshold = 0.95f;
+        [Space]
+        public AudioCueSO deathAudioCue;
 
         bool CanTrample(Predator p)
         {
@@ -44,6 +46,12 @@ namespace metakazz
                 }
 
             }
+        }
+
+        public new void Die()
+        {
+            base.Die();
+            deathAudioCue.RaiseEvent();
         }
     }
 }
