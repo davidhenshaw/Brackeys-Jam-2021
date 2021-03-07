@@ -22,7 +22,9 @@ namespace metakazz
 
         private void Start()
         {
-            mainHerd = mainHerdAnchor.Transform.GetComponent<Herd>();
+            if(mainHerdAnchor.Transform != null)
+                mainHerd = mainHerdAnchor.Transform.GetComponent<Herd>();
+
             if (mainHerd != null)
             {
                 mainHerd.AgentAdded += OnHerdAgentAdded;

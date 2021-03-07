@@ -34,9 +34,14 @@ namespace metakazz{
         // Start is called before the first frame update
         void Start()
         {
-            mainHerd = mainHerdAnchor.Transform.GetComponent<Herd>();
-            mainHerd.AgentAdded += OnHerdAgentGained;
-            mainHerd.AgentRemoved += OnHerdAgentLost;
+            if(mainHerdAnchor.Transform)
+                mainHerd = mainHerdAnchor.Transform.GetComponent<Herd>();
+
+            if (mainHerd)
+            {
+                mainHerd.AgentAdded += OnHerdAgentGained;
+                mainHerd.AgentRemoved += OnHerdAgentLost;
+            }
 
             //AgentEnteredGoalArea.OnEventRaised += CheckForWin;
 
