@@ -2,25 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using metakazz.Util;
 
-namespace metakazz{
+namespace metakazz
+{
     public class SceneController : MonoBehaviour
     {
         public static SceneController instance;
 
-        [SerializeField]
-        public float quitTime = 3f;
         float elapsed;
-
+        [Header("Incoming Events")]
+        public VoidEventSO loadMainMenuEvent;
+        public VoidEventSO loadGameplayEvent;
+        [Header("Outgoing Events")]
         public VoidEventSO quitAppEvent;
         public VoidEventSO quitAppCanceled;
+        [SerializeField]
+        public float quitTime = 3f;
 
         private void Awake()
         {
             SetUpSingleton();
-
-            if(instance == this)
-                SceneManager.LoadSceneAsync("Gameplay UI", LoadSceneMode.Additive);
         }
 
         private void SetUpSingleton()
@@ -36,10 +38,15 @@ namespace metakazz{
             }
         }
 
+        private void Start()
+        {
+            loadGameplayEvent.OnEventRaised += LoadGameplayScene;
+            loadMainMenuEvent.OnEventRaised += LoadMainMenu;
+        }
+
         // Update is called once per frame
         void Update()
         {
-
             RunQuitTimer();
 
             if(Input.GetKeyDown(KeyCode.Escape))
@@ -56,11 +63,31 @@ namespace metakazz{
 
             if(Input.GetKeyDown(KeyCode.R))
             {
-                StartCoroutine(ReloadScene());
+                LoadGameplayScene();
             }
         }
 
-        IEnumerator ReloadScene()
+        public void LoadGameplayScene()
+        {
+            StartCoroutine(LoadGameplayScene_co());
+        }
+
+        public void LoadMainMenu()
+        {
+            StartCoroutine(LoadMainMenuScene_co());
+        }
+
+        IEnumerator LoadMainMenuScene_co()
+        {
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Main Menu");
+
+            while (!asyncLoad.isDone)
+            {
+                yield return null;
+            }
+        }
+
+        IEnumerator LoadGameplayScene_co()
         {
             AsyncOperation asyncGameplayLoad = SceneManager.LoadSceneAsync("SampleScene");
             AsyncOperation asyncUILoad = SceneManager.LoadSceneAsync("Gameplay UI", LoadSceneMode.Additive);
@@ -69,8 +96,6 @@ namespace metakazz{
             {
                 yield return null;
             }
-
-
         }
 
         void RunQuitTimer()
