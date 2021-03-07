@@ -16,14 +16,20 @@ namespace metakazz{
         int _numTramples;
 
         /*Events*/
+        [Header("Events")]
         public VoidEventSO LoseEvent;
         public VoidEventSO WinEvent;
-        [Space]
         public IntEventSO AgentEnteredGoalArea;
         public IntEventSO AgentExitedGoalArea;
-        [Space]
+
+        [Header("Anchors")]
         public FloatAnchor mainHerdSizeAnchor;
         public FloatAnchor trampleCountAnchor;
+
+        [Space]
+        [Header("Music")]
+        public AudioCueSO gameplayMusicCue;
+        public AudioCueSO gameOverMusicCue;
 
         // Start is called before the first frame update
         void Start()
@@ -41,6 +47,8 @@ namespace metakazz{
             trampleCountAnchor.Value = 0;
 
             Prey.PredatorTrampled += OnPredatorTrampled;
+
+            gameplayMusicCue.RaiseEvent();
         }
 
         void OnHerdAgentGained(HerdAgent a)
@@ -81,7 +89,11 @@ namespace metakazz{
         void CheckForLose(int herdCount)
         {
             if(herdCount < scoreToLose)
-                LoseEvent.RaiseEvent();
+            {
+                LoseEvent?.RaiseEvent();
+                gameOverMusicCue?.RaiseEvent();
+            }
+
         }
     }
 }

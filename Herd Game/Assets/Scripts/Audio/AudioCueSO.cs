@@ -23,5 +23,7 @@ namespace metakazz
     public struct AudioCue
     {
         public AudioClip clip;
+        public bool oneShot;
+        public bool loop;
     }
 }

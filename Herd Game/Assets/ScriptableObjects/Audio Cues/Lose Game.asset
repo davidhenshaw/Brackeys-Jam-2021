@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Lose Game
   m_EditorClassIdentifier: 
   audioCue:
-    clip: {fileID: 8300000, guid: d1e93ddb08d2f4e4b88868ae5374d2dd, type: 3}
+    clip: {fileID: 8300000, guid: 9545e480978211246a82de8e0f9108e4, type: 3}
+    oneShot: 0
+    loop: 0

@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioCue:
     clip: {fileID: 8300000, guid: f80adbae7bde70f46a87f0055075dea5, type: 3}
+    oneShot: 1
+    loop: 0
