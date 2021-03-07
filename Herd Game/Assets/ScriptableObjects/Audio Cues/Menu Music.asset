@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Menu Music
   m_EditorClassIdentifier: 
   audioCue:
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 57bd28e406e390b4b9907b25b9b4095e, type: 3}
     oneShot: 0
-    loop: 0
+    loop: 1
