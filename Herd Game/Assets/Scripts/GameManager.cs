@@ -2,10 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using metakazz.Util;
+using System;
 
 namespace metakazz{
     public class GameManager : MonoBehaviour
     {
+        public static GameManager instance;
+
+        private void SetUpSingleton()
+        {
+            if (instance == null)
+            {
+                instance = this;
+                //DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        public event Action<Difficulty> DifficultyChanged;
+
         public TransformAnchor mainHerdAnchor;
         Herd mainHerd;
 
@@ -100,5 +118,10 @@ namespace metakazz{
             }
 
         }
+    }
+
+    public enum Difficulty
+    {
+        Easy, Normal, Hard, Insane
     }
 }
