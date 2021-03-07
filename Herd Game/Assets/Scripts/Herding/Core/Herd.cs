@@ -147,7 +147,7 @@ namespace metakazz{
             return ret;
         }
 
-        private List<Transform> GetNearbyObjects(HerdAgent agent)
+        public List<Transform> GetNearbyObjects(HerdAgent agent)
         {
             List<Transform> context = new List<Transform>();
             Collider2D[] contextColliders = Physics2D.OverlapCircleAll(agent.transform.position, neighborRadius);

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ec045d930b8b84187c69712e712bdf, type: 3}
+  m_Name: Prey Sighted Audio Cue
+  m_EditorClassIdentifier: 
+  filter: {fileID: 11400000, guid: 4e92ca8401be5ba4ab1462308bcba219, type: 2}
+  emitAtCount: 1
+  audioCue: {fileID: 11400000, guid: b4282420288455149bc59f2a8a82251a, type: 2}

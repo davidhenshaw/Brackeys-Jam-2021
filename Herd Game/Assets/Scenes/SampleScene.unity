@@ -1148,7 +1148,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3966,6 +3966,8 @@ MonoBehaviour:
   cues:
   - {fileID: 11400000, guid: bc0ddcda00fc1cd4383f8b7bb4730700, type: 2}
   - {fileID: 11400000, guid: 2149b430a358e854b9abe7b45d8fff04, type: 2}
+  - {fileID: 11400000, guid: b4282420288455149bc59f2a8a82251a, type: 2}
+  - {fileID: 11400000, guid: cf3a7c6afb4e05c48a23405d0c8589fe, type: 2}
 --- !u!1 &2052998754
 GameObject:
   m_ObjectHideFlags: 0
