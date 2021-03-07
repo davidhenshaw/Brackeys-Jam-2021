@@ -8,12 +8,13 @@ namespace metakazz
     {
         [SerializeField] Herd prefab;
 
+        [ContextMenu("Spawn")]
         public void Spawn()
         {
             Instantiate(prefab, transform);
         }
-
-        public void Spawn(int count)
+        
+        public void Spawn(int count=5)
         {
             var herd = Instantiate(prefab, transform);
             herd.startingCount = count;

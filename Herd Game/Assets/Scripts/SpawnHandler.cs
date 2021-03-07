@@ -10,6 +10,8 @@ namespace metakazz
 
         TransformAnchor mainHerdAnchor;
 
+        int targetAgentCount;
+
         int currAgentCount;
         Difficulty currDifficulty;
 
@@ -22,7 +24,18 @@ namespace metakazz
         // Update is called once per frame
         void Update()
         {
-            
+            if(currAgentCount < targetAgentCount)
+            {
+                SpawnHerds(targetAgentCount - currAgentCount);
+            }
+        }
+
+        void SpawnHerds(int numAgents)
+        {
+            //choose a spawner 
+                // loop through all spawners
+                // find distance from spawner to player's herd
+                // if distance is above minimum, tell spawner to spawn
         }
 
         public void OnDifficultyChanged(Difficulty d)

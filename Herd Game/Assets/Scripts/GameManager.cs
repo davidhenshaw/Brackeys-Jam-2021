@@ -49,6 +49,11 @@ namespace metakazz{
         public AudioCueSO gameplayMusicCue;
         public AudioCueSO gameOverMusicCue;
 
+        private void Awake()
+        {
+            SetUpSingleton();
+        }
+
         // Start is called before the first frame update
         void Start()
         {
