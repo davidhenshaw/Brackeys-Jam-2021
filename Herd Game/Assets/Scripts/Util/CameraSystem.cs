@@ -10,14 +10,16 @@ namespace metakazz
     {
         public TransformAnchor cameraAnchor;
         public TransformAnchor mainHerdAnchor;
-
+        [Space]
         public CinemachineTargetGroup targetGroup;
+        public TransformAnchor targetGroupAnchor;
 
         Herd mainHerd;
 
         private void Awake()
         {
             cameraAnchor.Transform = Camera.main.transform;
+            targetGroupAnchor.Transform = targetGroup.transform;
         }
 
         private void Start()

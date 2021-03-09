@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Wildebeest Death
   m_EditorClassIdentifier: 
   audioCue:
-    clip: {fileID: 8300000, guid: d1e93ddb08d2f4e4b88868ae5374d2dd, type: 3}
+    clip: {fileID: 8300000, guid: 2b3f8e4317dfdeb4293c408388a1b200, type: 3}
     oneShot: 1
     loop: 0
