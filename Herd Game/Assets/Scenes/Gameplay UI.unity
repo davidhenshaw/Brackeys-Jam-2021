@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 813050239}
   - component: {fileID: 813050238}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Player Boundary Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1987,6 +1987,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1657671089}
     m_Modifications:
+    - target: {fileID: 2344151740580112676, guid: c41981fc612d88542b5a64380b277f5f,
+        type: 3}
+      propertyPath: m_Name
+      value: Stampede Indicator
+      objectReference: {fileID: 0}
     - target: {fileID: 6475983628609443978, guid: c41981fc612d88542b5a64380b277f5f,
         type: 3}
       propertyPath: m_Pivot.x
