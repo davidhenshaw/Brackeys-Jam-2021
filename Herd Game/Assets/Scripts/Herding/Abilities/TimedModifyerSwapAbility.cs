@@ -10,7 +10,6 @@ namespace metakazz
         HerdBehaviorModifyer modifyerCache;
         public HerdBehaviorModifyer newModifyer;
         [Space]
-        public float duration;
         float elapsed;
         bool isActive;
 

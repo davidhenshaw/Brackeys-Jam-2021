@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-namespace metakazz{
-    public class AbilityUIController : MonoBehaviour
+namespace metakazz
+{
+    public abstract class AbilityUIEffect : MonoBehaviour
     {
-        [SerializeField] Ability ability;
-
+        public Ability ability;
         // Start is called before the first frame update
         void Start()
         {
@@ -22,19 +23,10 @@ namespace metakazz{
             ability.Ready -= OnReady;
         }
 
-        void OnReady()
-        {
-            Debug.Log(ability.name + " ready!");
-        }
+        public abstract void OnReady();
 
-        void OnActivate()
-        {
-            Debug.Log(ability.name + " activated!");
-        }
+        public abstract void OnActivate();
 
-        void OnCooldown()
-        {
-            Debug.Log(ability.name + " availible in " + ability.CooldownTime + " seconds");
-        }
+        public abstract void OnCooldown();
     }
 }

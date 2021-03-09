@@ -11,11 +11,13 @@ namespace metakazz
         public event Action Activated;
         public event Action CooldownStarted;
 
-        public float coolTime;
+        [SerializeField] protected float duration;
+        [SerializeField] protected float coolTime;
         protected bool isReady = true;
 
         public bool IsReady { get => isReady; }
         public float CooldownTime { get => coolTime; }
+        public float Duration { get => duration; }
 
         public IEnumerator TryActivate(Herd targetHerd)
         {

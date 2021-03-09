@@ -10,7 +10,6 @@ namespace metakazz
         HerdBehavior behaviorCache;
         public HerdBehavior newBehavior;
         [Space]
-        public float duration;
         float elapsed;
         bool isActive;
 
