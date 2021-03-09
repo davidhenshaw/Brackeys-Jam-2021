@@ -13,6 +13,7 @@ namespace metakazz
         public AudioCueSO scatterAudioCue;
 
         Herd targetHerd;
+        Coroutine abilityCoroutine;
 
         private void Awake()
         {
@@ -42,11 +43,20 @@ namespace metakazz
             if (a == null)
                 return;
 
-            if(a.IsReady)
+            StartCoroutine(AbilityThenCooldown_co(a));
+        }
+
+        IEnumerator AbilityThenCooldown_co(Ability a)
+        {
+            IEnumerator coroutine = a.TryActivate(targetHerd);
+
+            if (coroutine != null)
             {
-                StartCoroutine(a.DoAbility(targetHerd));
+                yield return StartCoroutine(coroutine);
                 StartCoroutine(a.Cooldown());
             }
+
+            yield return null;
         }
     }
 }

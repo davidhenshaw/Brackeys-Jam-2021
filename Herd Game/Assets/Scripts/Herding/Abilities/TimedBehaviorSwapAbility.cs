@@ -19,7 +19,7 @@ namespace metakazz
             isReady = true;
         }
 
-        public override IEnumerator DoAbility(Herd targetHerd)
+        protected override IEnumerator DoAbility(Herd targetHerd)
         {
             behaviorCache = targetHerd.behavior;
 

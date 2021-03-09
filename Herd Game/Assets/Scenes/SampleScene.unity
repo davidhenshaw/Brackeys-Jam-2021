@@ -3676,6 +3676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainHerdAnchor: {fileID: 11400000, guid: b394b388ac591c440be165e95cd3ecc3, type: 2}
   targetGroupAnchor: {fileID: 11400000, guid: 1ebb104a9f4c95c45a242d64ba889a5c, type: 2}
+  targetAgentCount: 5
   minSpawnDistance: 40
   spawners:
   - {fileID: 1928023027}
@@ -3891,7 +3892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &2098802695
 BoxCollider2D:
   m_ObjectHideFlags: 0

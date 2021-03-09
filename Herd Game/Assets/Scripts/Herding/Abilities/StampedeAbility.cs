@@ -14,7 +14,7 @@ namespace metakazz
 
         public float duration = 3f;
 
-        public override IEnumerator DoAbility(Herd herd)
+        protected override IEnumerator DoAbility(Herd herd)
         {
             yield return new WaitForSeconds(duration);
         }
