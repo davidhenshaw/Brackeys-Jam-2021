@@ -14,6 +14,10 @@ namespace metakazz
         public int targetAgentCount = 5;
         public float minSpawnDistance = 35;
 
+        [Space]
+
+        public float maxPerSpawner = 3;
+
         [SerializeField] List<HerdSpawner> spawners;
 
         int currAgentCount;
@@ -61,25 +65,31 @@ namespace metakazz
             // find distance from spawner to player's herd
             // if distance is above minimum, tell spawner to spawn
 
+            int numLeft = numAgents;
+
+            //Generate a list of numbers
             List<int> numbers = new List<int>();
             for (int i = 0; i < spawners.Count; i++)
                 numbers.Add(i);
 
-            while(numbers.Count > 0)
+            //Randomly pick from the remaining numbers in the list
+            // to choose a spawner
+            while(numbers.Count > 0 && numLeft > 0)
             {
-                int rand = UnityEngine.Random.Range(0, numbers.Count);
+                int rand = UnityEngine.Random.Range(0, numbers.Count);   //The randomizer will never pick "1" if numbers.Count is 1
 
                 float dist = Vector3.Distance(groupTransform.position, spawners[rand].transform.position);
+                bool canSpawn = dist > minSpawnDistance;
 
-                if(dist > minSpawnDistance)
+                if (canSpawn)
                 {
-                    spawners[rand].Spawn(numAgents);
-                    break;
+                    int numToSpawn = Mathf.FloorToInt(Mathf.Clamp(numLeft, 0, maxPerSpawner));
+                    spawners[rand].Spawn(numToSpawn);
+
+                    numLeft -= numToSpawn;
                 }
-                else
-                {
-                    numbers.Remove(rand);
-                }
+
+                numbers.RemoveAt(rand);
             }
         }
 

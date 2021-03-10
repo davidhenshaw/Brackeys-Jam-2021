@@ -49,7 +49,7 @@ MonoBehaviour:
   modifyer: {fileID: 11400000, guid: 8e97e18873f9c884b9830a0a78d2a264, type: 2}
   startingCount: 5
   agentDensity: 1.02
-  neighborRadius: 5
+  neighborRadius: 4.96
   avoidRadius: 1.99
   speedMultiplier: 2.03
   maxSpeed: 6

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentPrefab: {fileID: 5358241987088486575, guid: 4939d7874c712184dafd5426331b4dae,
     type: 3}
-  behavior: {fileID: 11400000, guid: 7e9b5e4a88800b34babd8b52a702dfb9, type: 2}
+  behavior: {fileID: 11400000, guid: b15eb8ceaf2e7184c946f455cf58b066, type: 2}
   modifyer: {fileID: 0}
   startingCount: 3
   agentDensity: 6.85

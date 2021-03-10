@@ -31,6 +31,7 @@ namespace metakazz{
 
         public float SquareAvoidanceRadius { get => avoidRadius; }
         public int AgentCount { get => GetComponentsInChildren<HerdAgent>().Length; }
+        public List<HerdAgent> Agents { get => herdAgents; }
 
         /*Events*/
         public event Action<HerdAgent> AgentAdded;

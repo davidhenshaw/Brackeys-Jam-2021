@@ -31,6 +31,22 @@ namespace metakazz
             {
                 mainHerd.AgentAdded += OnHerdAgentAdded;
                 mainHerd.AgentRemoved += OnHerdAgentRemoved;
+
+                AddExistingAgents(mainHerd);
+            }
+        }
+
+        private void OnDisable()
+        {
+            mainHerd.AgentAdded -= OnHerdAgentAdded;
+            mainHerd.AgentRemoved -= OnHerdAgentRemoved;
+        }
+
+        void AddExistingAgents(Herd h)
+        {
+            foreach(HerdAgent a in h.Agents)
+            {
+                targetGroup.AddMember(a.transform, 1, 0);
             }
         }
 
