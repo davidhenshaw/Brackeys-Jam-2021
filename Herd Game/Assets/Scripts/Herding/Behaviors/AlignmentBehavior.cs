@@ -18,10 +18,14 @@ namespace metakazz
 
             List<Transform> filteredContext = filter == null ? context : filter.Filter(agent, context);
 
+            if (filteredContext.Count <= 0)
+                return agent.transform.up;
+
             foreach (Transform item in filteredContext)
             {
                 alignmentMove += (Vector2)item.transform.up;
             }
+
             alignmentMove /= filteredContext.Count;
 
             return alignmentMove.normalized;

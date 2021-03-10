@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftClickEvent: {fileID: 11400000, guid: f215705a44bd2924d82aa141bd2f4428, type: 2}
   radius: 5
-  maxThreshold: 0.707
-  targetPosition: {x: -2.4797466, y: 14.953758}
+  maxThreshold: 0.844
+  targetPosition: {x: 0, y: 0}

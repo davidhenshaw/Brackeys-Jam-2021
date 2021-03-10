@@ -35,7 +35,7 @@ namespace metakazz{
             }
 
 
-            return centerOffset * t * t;
+            return centerOffset * t;//* t;
         }
 
         public void OnLeftClick(Transform t)
