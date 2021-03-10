@@ -48,7 +48,7 @@ MonoBehaviour:
   behavior: {fileID: 11400000, guid: 8c22933fd62d62541bb73940a1027c9c, type: 2}
   modifyer: {fileID: 11400000, guid: 8e97e18873f9c884b9830a0a78d2a264, type: 2}
   startingCount: 5
-  agentDensity: 1.02
+  agentDensity: 0.54
   neighborRadius: 4.96
   avoidRadius: 1.99
   speedMultiplier: 2.03

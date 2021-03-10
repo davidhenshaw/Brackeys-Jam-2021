@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace metakazz
 {
-    [CreateAssetMenu(menuName = "Herd Filter/Physics Layer")]
+    [CreateAssetMenu(menuName = "Context Filter/Physics Layer")]
     public class PhysicsLayerFilter : ContextFilter
     {
         public LayerMask layerMask;

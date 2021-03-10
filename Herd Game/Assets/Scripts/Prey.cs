@@ -29,13 +29,13 @@ namespace metakazz
             return speedReq && angleReq;
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnCollisionEnter2D(Collision2D collision)
         {
             Predator predator = collision.gameObject.GetComponent<Predator>();
 
             if (predator != null)
             {
-                if(CanTrample(predator))
+                if (CanTrample(predator))
                 {
                     predator.Die();
                     PredatorTrampled?.Invoke(predator.transform);
