@@ -25,7 +25,7 @@ namespace metakazz{
             {
                 average += (Vector2)item.position;
             }
-            average /= context.Count;
+            average /= filteredContext.Count;
 
             movement = average - (Vector2)agent.transform.position;
 

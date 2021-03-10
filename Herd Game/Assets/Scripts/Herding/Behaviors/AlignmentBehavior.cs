@@ -22,7 +22,7 @@ namespace metakazz
             {
                 alignmentMove += (Vector2)item.transform.up;
             }
-            alignmentMove /= context.Count;
+            alignmentMove /= filteredContext.Count;
 
             return alignmentMove.normalized;
         }

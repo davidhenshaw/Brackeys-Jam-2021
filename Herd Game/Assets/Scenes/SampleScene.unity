@@ -1934,7 +1934,7 @@ MonoBehaviour:
     type: 3}
   behavior: {fileID: 11400000, guid: 6346ddb53ac360d419c1c397ace4085f, type: 2}
   modifyer: {fileID: 11400000, guid: 5dd07196071fca54fb16fd78a7ff2d50, type: 2}
-  startingCount: 1
+  startingCount: 10
   agentDensity: 6.85
   neighborRadius: 1.49
   avoidRadius: 2
@@ -3178,7 +3178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1985932051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3601,7 +3601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2045279266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3893,7 +3893,7 @@ PrefabInstance:
     - target: {fileID: 8683063736207397292, guid: 8c3d4e3c65b62a54fb9803c90567260d,
         type: 3}
       propertyPath: orthographic size
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8683063736366028030, guid: 8c3d4e3c65b62a54fb9803c90567260d,
         type: 3}
