@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c4c55052b0b3a4aa40933f578ab7ef, type: 3}
   m_Name: Stampede Ability
   m_EditorClassIdentifier: 
-  coolTime: 5
-  newModifyer: {fileID: 11400000, guid: 1adc9e3f62d99a64eb8398ad4a20e459, type: 2}
   duration: 3
+  coolTime: 5
+  audioCueSO: {fileID: 11400000, guid: bc0ddcda00fc1cd4383f8b7bb4730700, type: 2}
+  newModifyer: {fileID: 11400000, guid: 1adc9e3f62d99a64eb8398ad4a20e459, type: 2}

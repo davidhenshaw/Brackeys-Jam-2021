@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7439ca9f9e5f343408d096935b7ed138, type: 3}
   m_Name: Scatter Ability
   m_EditorClassIdentifier: 
-  coolTime: 5
-  newBehavior: {fileID: 11400000, guid: a0666d31572d9c74b909aab58c6be072, type: 2}
   duration: 3
+  coolTime: 5
+  audioCueSO: {fileID: 11400000, guid: 2149b430a358e854b9abe7b45d8fff04, type: 2}
+  newBehavior: {fileID: 11400000, guid: a0666d31572d9c74b909aab58c6be072, type: 2}

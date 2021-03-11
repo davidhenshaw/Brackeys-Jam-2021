@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Gameplay Music
   m_EditorClassIdentifier: 
   audioCue:
-    clip: {fileID: 8300000, guid: 985fc1861d4a8fb448515a59b9a6fcf2, type: 3}
+    clip: {fileID: 8300000, guid: 839435a716f70164c9d0b0feffca4483, type: 3}
     oneShot: 0
     loop: 1

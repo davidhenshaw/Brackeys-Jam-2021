@@ -13,11 +13,14 @@ namespace metakazz
 
         [SerializeField] protected float duration;
         [SerializeField] protected float coolTime;
-        protected bool isReady = true;
+
+        [SerializeField] protected AudioCueSO audioCueSO;
 
         public bool IsReady { get => isReady; }
         public float CooldownTime { get => coolTime; }
         public float Duration { get => duration; }
+
+        protected bool isReady = true;
 
         public IEnumerator TryActivate(Herd targetHerd)
         {
@@ -25,6 +28,12 @@ namespace metakazz
             {
                 Activated?.Invoke();
                 isReady = false;
+
+                if(audioCueSO != null)
+                {
+                    audioCueSO.RaiseEvent();
+                }
+
                 return DoAbility(targetHerd);
             }
 

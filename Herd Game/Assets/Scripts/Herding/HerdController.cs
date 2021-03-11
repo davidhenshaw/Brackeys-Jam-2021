@@ -8,9 +8,6 @@ namespace metakazz
     {
         public Ability ability1;
         public Ability ability2;
-        [Space]
-        public AudioCueSO stampedeAudioCue;
-        public AudioCueSO scatterAudioCue;
 
         Herd targetHerd;
         Coroutine abilityCoroutine;
@@ -27,14 +24,12 @@ namespace metakazz
             if(Input.GetKeyDown(KeyCode.Alpha1))
             {
                 TriggerAbility(ability1);
-                scatterAudioCue.RaiseEvent();
             }
 
             // Stampede
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 TriggerAbility(ability2);
-                stampedeAudioCue.RaiseEvent();
             }
         }
 
